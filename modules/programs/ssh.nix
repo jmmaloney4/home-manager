@@ -149,6 +149,16 @@ let
         '';
       };
 
+      identityAgent = mkOption {
+        type = with types; either (listOf str) (nullOr str);
+        default = [ ];
+        example = ''"~/.1password/agent.sock"'';
+        apply = p: if p == null then [ ] else if isString p then [ p ] else p;
+        description = ''
+          Specifies path to ssh-agent socket.
+        '';
+      };
+
       user = mkOption {
         type = types.nullOr types.str;
         default = null;
@@ -327,6 +337,7 @@ let
     ++ optional (!cf.checkHostIP) "  CheckHostIP no"
     ++ optional (cf.proxyCommand != null) "  ProxyCommand ${cf.proxyCommand}"
     ++ optional (cf.proxyJump != null) "  ProxyJump ${cf.proxyJump}"
+    ++ map (agent: "  IdentityAgent ${agent}") cf.identityAgent
     ++ map (file: "  IdentityFile ${file}") cf.identityFile
     ++ map (file: "  CertificateFile ${file}") cf.certificateFile
     ++ map (f: "  LocalForward" + addressPort f.bind + addressPort f.host)
