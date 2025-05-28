@@ -48911,6 +48911,165 @@ package</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-programs.opencommit.enable"></a><a class="term" href="options.xhtml#opt-programs.opencommit.enable"><code class="option">programs.opencommit.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable OpenCommit AI commit message generator.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/opencommit.nix" target="_top">
+&lt;home-manager/modules/programs/opencommit.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.opencommit.apiKey"></a><a class="term" href="options.xhtml#opt-programs.opencommit.apiKey"><code class="option">programs.opencommit.apiKey</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>API key for OpenAI or Claude (OCO_API_KEY).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;sk-...&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/opencommit.nix" target="_top">
+&lt;home-manager/modules/programs/opencommit.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.opencommit.language"></a><a class="term" href="options.xhtml#opt-programs.opencommit.language"><code class="option">programs.opencommit.language</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Language for commit messages (OCO_LANGUAGE).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;en&quot;</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;en&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/opencommit.nix" target="_top">
+&lt;home-manager/modules/programs/opencommit.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.opencommit.model"></a><a class="term" href="options.xhtml#opt-programs.opencommit.model"><code class="option">programs.opencommit.model</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>LLM model to use (OCO_MODEL).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;gpt-4o&quot;</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;gpt-4o&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/opencommit.nix" target="_top">
+&lt;home-manager/modules/programs/opencommit.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.opencommit.promptModule"></a><a class="term" href="options.xhtml#opt-programs.opencommit.promptModule"><code class="option">programs.opencommit.promptModule</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Prompt module (conventional-commit or @commitlint) (OCO_PROMPT_MODULE).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;conventional-commit&quot;</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;conventional-commit&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/opencommit.nix" target="_top">
+&lt;home-manager/modules/programs/opencommit.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-programs.opencommit.setGitHook"></a><a class="term" href="options.xhtml#opt-programs.opencommit.setGitHook"><code class="option">programs.opencommit.setGitHook</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to set up the OpenCommit git hook (<code class="literal">oco hook set</code>).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/nix-community/home-manager/blob/master/modules/programs/opencommit.nix" target="_top">
+&lt;home-manager/modules/programs/opencommit.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-programs.openstackclient.enable"></a><a class="term" href="options.xhtml#opt-programs.openstackclient.enable"><code class="option">programs.openstackclient.enable</code>
   </a>
  </span>
